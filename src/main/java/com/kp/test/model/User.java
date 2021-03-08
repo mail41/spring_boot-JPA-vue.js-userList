@@ -31,15 +31,5 @@ public class User {
 	  this.user_name = user_name;
 	}
     
-
-//    public User(UserForm userForm) {
-//        this.email = userForm.getEmail();
-//        this.userName = userForm.getUserName();
-//        this.password = userForm.getPassword();
-//    }
-//
-//    public static User createUser(UserForm userForm){
-//        return new User(userForm);
-//    }
 	    
 }

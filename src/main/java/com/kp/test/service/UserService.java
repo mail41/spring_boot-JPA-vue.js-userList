@@ -22,29 +22,9 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	
-	 	//회원가입
-//	    public void signUpUser(UserForm userForm) throws Exception {
-//	        validateDuplicateEmail(userForm.getEmail());
-//	        userRepository.save(User.createUser(userForm));
-//	    }
-	 	
-	 	//이메일 중복확인
-//	    private void validateDuplicateEmail(String email) throws Exception {
-//	        if(userRepository.existsByEmail(email)){
-//	            throw new DuplicateEmailException();
-//	        }
-//	    }
 	    //회원목록
 	    public List selectUser() {
 	        return userRepository.findAll();
-	    }
-//	 
-//	 public List<User> findAll() { 
-//		 List<User> user = new ArrayList<>(); 
-//		 userRepository.findAll().forEach(e -> user.add(e)); 
-//		 logger.info("@@@@"+user);
-//		 return user; 
-//		 }
+	    }	
 
 }

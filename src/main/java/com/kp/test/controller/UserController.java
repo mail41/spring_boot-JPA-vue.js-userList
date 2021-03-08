@@ -28,8 +28,6 @@ import com.kp.test.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 
-
-//@CrossOrigin(origins = "http://localhost:8083")
 @CrossOrigin("*")
 @Component
 @RestController
@@ -44,29 +42,13 @@ public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 	
-	//회원가입
-//	@RequestMapping("/signup")
-//	    public void signUpUser(@RequestBody @Valid UserForm userForm) throws Exception {
-//	        userService.signUpUser(userForm);
-//	    }
-	
 	//회원목록
 	@RequestMapping("/selectUser")
 	public List selectUser(){
 
-			//List<User> user = userService.findAll(); 
-			//return new ResponseEntity<List<User>>(user, HttpStatus.OK);
-			
-			return userService.selectUser();
-			
+		return userService.selectUser();	
 		
-			}
+	}
 	
-
-
 }
-//		String email = param.get("email");
-//		String uesrName = param.get("userName");
-//		User user = User.builder().email(email).userName(uesrName).build();
-//		userRepository.save(user);
 
